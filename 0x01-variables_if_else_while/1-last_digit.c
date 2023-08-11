@@ -6,7 +6,7 @@
 *
 *Return: Always 0 (Success)
 */
-int main(void)	
+int main(void)
 {
 	int n;
 	int lastdig;
@@ -14,10 +14,10 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	lastdig = n % 10;
+lastdig = n % 10;
 if (lastdig < 0)
 {
-lastdig = -lastdig;  
+lastdig = -lastdig;
 }
 if (lastdig > 5)
 {
