@@ -10,13 +10,6 @@
 void print_alphabet(void);
 void _putchar(char c);
 
-int main(void)
-{
-/*calling func,printing out func,returning value*/
-print_alphabet();
-return (0);
-}
-
 /**
  * print_alphabet - prints lowercase letters followed by a new line
  *
