@@ -8,6 +8,7 @@
 
 /*function declaration*/
 void print_alphabet(void);
+void _putchar(char c);
 
 int main(void)
 {
@@ -26,7 +27,17 @@ void print_alphabet(void)
 char a;
 for (a = 'a' ; a <= 'z' ; a++)
 {
-putchar(a);
+_putchar(a);
 }
-putchar('\n');
+_putchar('\n');
+}
+
+/**
+ * _putchar - performs the putchar function
+ *@c: the character to be output
+ * Description: this function defines _putchar function
+ */
+void _putchar(char c)
+{
+putchar(c);
 }
