@@ -9,6 +9,11 @@
 int print_last_digit(int r)
 {
 int lastnum = r % 10;
+/*For negative numbers*/
+if (lastnum < 0)
+{
+lastnum = lastnum * -1;
+}
 _putchar(lastnum + '0');
 return (lastnum);
 }
