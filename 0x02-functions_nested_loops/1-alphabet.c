@@ -8,7 +8,7 @@
 
 /*function declaration*/
 void print_alphabet(void);
-void _putchar(char c);
+void _putchar(char a);
 
 /**
  * print_alphabet - prints lowercase letters followed by a new line
@@ -30,7 +30,7 @@ _putchar('\n');
  *@c: the character to be output
  * Description: this function defines _putchar function
  */
-void _putchar(char c)
+void _putchar(char a)
 {
-putchar(c);
+putchar(a);
 }
