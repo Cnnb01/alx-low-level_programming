@@ -7,10 +7,10 @@
 */
 int main(void)
 {
-long long int i, prev = 1, curr = 2, next;
+int i, prev = 1, curr = 2, next;
 for (i = 1 ; i <= 50 ; i++)
 {
-printf("%lld", prev);
+printf("%d", prev);
 if (i != 50)
 {
 printf(", ");
