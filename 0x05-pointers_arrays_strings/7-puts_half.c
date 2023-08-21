@@ -11,7 +11,7 @@ int i, n, length_of_the_string;
 /*n1 = (length_of_the_string - 1) / 2;*/
 length_of_the_string = strlen(str);
 n = (length_of_the_string) / 2;
-for (i = n ; i <= length_of_the_string ; i++)
+for (i = n ; i < length_of_the_string ; i++)
 {
 _putchar(str[i]);
 }
