@@ -17,5 +17,5 @@ if (i % 2 == 0)
 _putchar(str[i]);
 }
 }
-_putchar('\n');
+/*_putchar('\n');*/
 }
