@@ -14,14 +14,22 @@ int capitalize = 1;
 
 while (*point != '\0')
 {
-if (capitalize &&(*point >= 'a' && *point <= 'z'))
+if (capitalize && (*point >= 'a' && *point <= 'z'))
 {
 *point = toupper(*point);
 capitalize = 0;
 }
-else if (*point == ' ' || *point == '\t' || *point == '\n' || *point == ',' || *point == ';' || *point == '.' || *point == '!' || *point == '?' || *point == '"' || *point == '(' || *point == ')' || *point == '{' || *point == '}')
+else if (*point == ' ' || *point == '\t' || *point == '\n' ||
+	*point == ',' || *point == ';' || *point == '.' ||
+	*point == '!' || *point == '?' || *point == '"' ||
+	*point == '(' || *point == ')' || *point == '{' ||
+	*point == '}')
 {
 capitalize = 1;
+}
+else
+{
+capitalize = 0;
 }
 point++;
 }
