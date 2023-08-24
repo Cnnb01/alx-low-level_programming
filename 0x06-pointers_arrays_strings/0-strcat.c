@@ -7,8 +7,18 @@
 */
 char *_strcat(char *dest, char *src)
 {
-char *point;
-point = strcat(dest, src);
+char *point = dest;
+while (*dest != '\0')
+{
+dest++;
+}
+while (*src != '\0')
+{
+*dest = *src;
+dest++;
+src++;
+}
+
 return (point);
 }
 
