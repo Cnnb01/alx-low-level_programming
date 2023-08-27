@@ -9,6 +9,7 @@ int main(void)
 {
 int i, sum;
 long int prev = 1, curr = 2, next;
+
 for (i = 1 ; i <= 50 ; i++)
 {
 printf("%ld", prev);
@@ -20,7 +21,8 @@ next = prev + curr;
 prev = curr;
 curr = next;
 }
-while (i < 4000000)
+
+while (next < 4000000)
 {
 if (i % 2 == 0)
 {
@@ -28,5 +30,6 @@ sum = i + sum;
 printf("\n");
 }
 }
+
 return (0);
 }
