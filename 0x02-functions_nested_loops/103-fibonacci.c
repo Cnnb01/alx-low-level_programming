@@ -22,7 +22,7 @@ while (next < 4000000)
 next = prev + curr;
 prev = curr;
 curr = next;
-if (next % 2 == 0)
+if (next % 2 == 0 && next < 4000000)
 {
 sum = next + sum;
 }
