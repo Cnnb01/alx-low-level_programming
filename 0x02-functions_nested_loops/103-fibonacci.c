@@ -25,10 +25,10 @@ curr = next;
 if (next % 2 == 0)
 {
 sum = next + sum;
+}
+}
 printf("%d", sum);
 printf("\n");
-}
-}
 
 return (0);
 }
