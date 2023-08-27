@@ -8,10 +8,10 @@
 int main(void)
 {
 int i;
-long long int prev = 1, curr = 2, next;
+long int prev = 1, curr = 2, next;
 for (i = 1 ; i <= 50 ; i++)
 {
-printf("%lld", prev);
+printf("%ld", prev);
 if (i != 50)
 {
 printf(", ");
