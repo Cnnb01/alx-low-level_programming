@@ -7,15 +7,7 @@
 */
 int main(void)
 {
-int i; 
 long int sum = 0, prev = 1, curr = 2, next;
-
-for (i = 1 ; i <= 50 ; i++)
-{
-next = prev + curr;
-prev = curr;
-curr = next;
-}
 
 while (next < 4000000)
 {
