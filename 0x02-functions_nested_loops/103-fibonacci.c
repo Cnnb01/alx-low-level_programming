@@ -12,11 +12,6 @@ long int prev = 1, curr = 2, next;
 
 for (i = 1 ; i <= 50 ; i++)
 {
-/*printf("%ld", prev);*/
-/*if (i != 50)*/
-/*{*/
-/*printf(", ");*/
-/*}*/
 next = prev + curr;
 prev = curr;
 curr = next;
@@ -30,7 +25,7 @@ curr = next;
 if (next % 2 == 0)
 {
 sum = next + sum;
-printf(sum);
+printf("%d", sum);
 printf("\n");
 }
 }
