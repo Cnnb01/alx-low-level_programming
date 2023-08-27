@@ -7,8 +7,8 @@
 */
 int main(void)
 {
-int i, sum = 2;
-long int prev = 1, curr = 2, next;
+int i; 
+long int sum = 0, prev = 1, curr = 2, next;
 
 for (i = 1 ; i <= 50 ; i++)
 {
@@ -27,8 +27,7 @@ if (next % 2 == 0 && next < 4000000)
 sum = next + sum;
 }
 }
-printf("%d", sum + 2);
-printf("\n");
+printf("%ld\n", sum + 2);
 
 return (0);
 }
