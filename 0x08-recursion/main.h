@@ -8,4 +8,5 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int sqt(int n, int n1);
 int is_prime_number(int n);
+int primer(int n, int i);
 #endif

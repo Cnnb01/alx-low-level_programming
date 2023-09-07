@@ -11,52 +11,31 @@ if (n < 2)
 {
 return (0);
 }
-if (n == 2 || n == 3 || n == 5 || n == 7)
+else if (n == 2)
 {
 return (1);
 }
-while (n > 11)
-{
-if (n % 2 == 0)
-{
+return (primer(n, 2));
 return (0);
 }
-else if(n % 3 == 0)
+/**
+*primer - a helper function to recursively calculate prime numbers
+*@n: integer being passed
+*@i: divisor to determine if number is prime
+*Return: the prime number
+*/
+int primer(int n, int i)
 {
-return (0);
-}
-else if (n % 4 == 0)
+if (i * i > n)
 {
-return (0);
+return (1);
 }
-else if (n % 5 == 0)
-{
-return (0);
-}
-else if (n % 6 == 0)
-{
-return (0);
-}
-else if (n % 7 == 0)
-{
-return (0);
-}
-else if (n % 8 == 0)
-{
-return (0);
-}
-else if (n % 9 == 0)
-{
-return (0);
-}
-else if (n % 10 == 0)
+if (n % i == 0)
 {
 return (0);
 }
 else
 {
-return (1);
+return (primer(n, i + 1));
 }
-}
-return (1);
 }
