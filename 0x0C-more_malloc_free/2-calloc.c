@@ -16,6 +16,10 @@ if (nmemb == 0 || size == 0)
 {
 return (0);
 }
+if (ar == NULL)
+{
+return (NULL);
+}
 return (ar);
 }
 
