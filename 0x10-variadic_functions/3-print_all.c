@@ -39,7 +39,7 @@ if (arg == NULL)
 {
 printf("nil");
 }
-printf("%s%s",separator, arg);
+printf("%s%s", separator, arg);
 break;
 }
 default:
