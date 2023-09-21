@@ -17,7 +17,7 @@ return (0);
 }
 while (p != NULL)
 {
-printf("[%d] %s\n", p->len, p->str);
+printf("[%u] %s\n", p->len, p->str);
 p = p->next;
 count++;
 }
