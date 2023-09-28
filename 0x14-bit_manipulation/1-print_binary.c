@@ -11,7 +11,8 @@ void print_binary(unsigned long int n)
 unsigned long int mask = 1UL << 63;
 if (n == 0)
 {
-putchar (0);
+putchar ('0');
+return;
 }
 while (mask > 0)
 {
