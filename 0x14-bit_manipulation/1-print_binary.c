@@ -9,6 +9,7 @@
 void print_binary(unsigned long int n)
 {
 unsigned long int mask = 1UL << 63;
+int printed = 0;
 if (n == 0)
 {
 putchar ('0');
@@ -19,8 +20,9 @@ while (mask > 0)
 if ((n & mask) != 0)
 {
 putchar('1');
+printed = 1;
 }
-else
+else if (printed)
 {
 putchar ('0');
 }
