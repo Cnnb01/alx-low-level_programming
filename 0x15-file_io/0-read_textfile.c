@@ -14,7 +14,7 @@ if (filename == NULL)
 {
 return (0);
 }
-opener = open (filename, O_RDONLY);
+opener = open(filename, O_RDONLY);
 if (opener == -1)
 {
 return (0);
@@ -28,14 +28,14 @@ char buffer[1024];
 ssize_t bytesread = read(opener, buffer, sizeof(buffer));
 if (bytesread == -1)
 {
-perror ("Error");
-close (opener);
+perror("Error");
+close(opener);
 return (0);
 }
-write (STDOUT_FILENO, buffer, bytesread);
-reader+=bytesread;
+write(STDOUT_FILENO, buffer, bytesread);
+reader += bytesread;
 }
-close (opener);
+close(opener);
 return (reader);
 }
 return (0);
