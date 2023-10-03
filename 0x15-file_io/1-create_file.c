@@ -14,7 +14,7 @@ if (filename == NULL)
 {
 return (-1);
 }
-opener = open(filename, O_WRONLY | O_CREAT, 0600);
+opener = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 if (opener == -1)
 {
 return (-1);
