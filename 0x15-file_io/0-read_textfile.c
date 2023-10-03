@@ -15,7 +15,7 @@ if (filename == NULL)
 return (0);
 }
 opener = open (filename, O_RDONLY);
-if (opener <= 0)
+if (opener == -1)
 {
 return (0);
 }
@@ -26,7 +26,7 @@ while (reader < letters)
 {
 char buffer[1024];
 ssize_t bytesread = read(opener, buffer, sizeof(buffer));
-if (bytesread <= 0)
+if (bytesread == -1)
 {
 perror ("Error");
 close (opener);
