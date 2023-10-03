@@ -19,12 +19,10 @@ if (opener == -1)
 {
 return (0);
 }
-else
-{
 reader = 0;
 while (reader < letters)
 {
-char buffer[1024];
+char buffer[1468];
 ssize_t bytesread = read(opener, buffer, sizeof(buffer));
 if (bytesread == -1)
 {
@@ -37,6 +35,4 @@ reader += bytesread;
 }
 close(opener);
 return (reader);
-}
-return (0);
 }
