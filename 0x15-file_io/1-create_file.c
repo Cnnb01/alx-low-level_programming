@@ -12,17 +12,22 @@ int create_file(const char *filename, char *text_content)
 int opener;
 if (filename == NULL)
 {
-return (0);
+return (-1);
 }
 opener = open(filename, O_WRONLY | O_CREAT, 0600);
 if (opener == -1)
 {
-return (0);
+return (-1);
 }
 
 if (text_content != NULL)
 {
-write(opener, text_content, strlen(text_content));
+char byteswritten = write(opener, text_content, strlen(text_content));
+if (byteswritten == -1)
+{
+close(opener);
+return (-1);
+}
 }
 close(opener);
 return (1);
