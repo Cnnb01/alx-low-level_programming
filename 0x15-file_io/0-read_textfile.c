@@ -9,7 +9,9 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 int opener;
+ssize_t bytesread;
 size_t reader;
+char buffer[1024];
 if (filename == NULL)
 {
 return (0);
@@ -20,18 +22,16 @@ if (opener == -1)
 return (0);
 }
 reader = 0;
-while (reader < letters)
+
+bytesread = read(opener, buffer, sizeof(buffer));
+while (bytesread > 0)
 {
-char buffer[1468];
-ssize_t bytesread = read(opener, buffer, sizeof(buffer));
-if (bytesread == -1)
-{
-perror("Error");
-close(opener);
-return (0);
-}
 write(STDOUT_FILENO, buffer, bytesread);
 reader += bytesread;
+if (reader >= letters)
+{
+break;
+}
 }
 close(opener);
 return (reader);
