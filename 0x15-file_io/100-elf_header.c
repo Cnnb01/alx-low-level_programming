@@ -8,7 +8,7 @@ void print_elf_header(int fd)
 {
 Elf32_Ehdr elf_header;
 lseek(fd, 0, SEEK_SET);
-read(fd, &elf_header, sizeof(elf_header));
+read(fd, &elf_header, sizeof(Elf32_Ehdr));
 printf("Magic:      %#x\n", elf_header.e_ident[EI_MAG0]);
 printf("Class:      %d\n", elf_header.e_ident[EI_CLASS]);
 printf("Data:       %d\n", elf_header.e_ident[EI_DATA]);
@@ -31,7 +31,7 @@ int fd;
 Elf32_Ehdr elf_header;
 if (argc != 2)
 {
-printf("Usage: %s elf_filename\n", argv[0]);
+fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
 return (1);
 }
 fd = open(argv[1], O_RDONLY);
@@ -41,9 +41,9 @@ perror("Error opening file");
 return (1);
 }
 
-if (read(fd, &elf_header, EI_NIDENT) != EI_NIDENT)
+if (read(fd, &elf_header, sizeof(Elf32_Ehdr)) != sizeof(Elf32_Ehdr))
 {
-printf("%s", ERR_MSG);
+fprintf(stderr, "%s", ERR_MSG);
 return (ERROR);
 }
 print_elf_header(fd);
