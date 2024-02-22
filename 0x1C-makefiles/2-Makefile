@@ -14,13 +14,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) -o $@ $(OBJ)
 
-# Dependency rule to update object files when a source file changes
-#$(OBJ): $(SRC)
-
 # Clean rule to remove object files and the executable
 clean:
 	rm -f $(OBJ) $(NAME)
-
-# Run the executable
-#run:
-#	./$(NAME)
