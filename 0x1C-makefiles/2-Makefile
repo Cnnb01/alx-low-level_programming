@@ -1,33 +1,26 @@
-# Compiler used
 CC = gcc
-
-# Source files
 SRC = main.c school.c
-
-# Object files (automatically generated from SRC)
 OBJ = $(SRC:.c=.o)
-
-# Executable name
 NAME = school
 
-# All rule (builds the executable, recompiling only updated source files)
+#recompiling only updated source files
 all: $(NAME)
 
-# Pattern rule for compiling source files to object files
+#source files to object files
 %.o: %.c
 	$(CC) -c -Wall -g $< -o $@
 
-# Link rule to create the executable from object files
+#create executable from object files
 $(NAME): $(OBJ)
 	$(CC) -o $@ $(OBJ)
 
 # Dependency rule to update object files when a source file changes
-$(OBJ): $(SRC)
+#$(OBJ): $(SRC)
 
 # Clean rule to remove object files and the executable
 clean:
 	rm -f $(OBJ) $(NAME)
 
 # Run the executable
-run:
-	./$(NAME)
+#run:
+#	./$(NAME)
