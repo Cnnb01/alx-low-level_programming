@@ -1,5 +1,6 @@
-#ifndef SEARCH_ALGORITHMS
-#define SEARCH_ALGORITHMS
+#ifndef search_algorithms_h
+#define search_algorithms_h
+
 #include <stdlib.h>
 #include <stdio.h>
 int linear_search(int *array, size_t size, int value);
