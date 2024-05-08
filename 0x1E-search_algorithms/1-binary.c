@@ -14,15 +14,15 @@ if (array == NULL || size == 0)
 {
 return (-1);
 }
-for (low = 0, high = size -1 ;low <= high;)
-{   
-printf("Searching in array: [%lu", low);
-for (i = low + 1; i <= high; i++) 
+for (low = 0, high = size - 1; low <= high; )
+{
+printf("Searching in array: %lu", low);
+for (i = low + 1; i <= high; i++)
 {
 printf(", %lu", i);
 }
-printf("]\n");
-mid = (low + high)/2;
+printf("\n");
+mid = (low + high) / 2;
 if (array[mid] == value)
 {
 return (mid);
@@ -36,5 +36,5 @@ else
 high = mid - 1;
 }
 }
-return -1;
+return (-1);
 }
